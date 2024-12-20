@@ -292,8 +292,8 @@ with pdf.table(width=60, col_widths=(17, 3), text_align='LEFT', align="LEFT", li
 pdf.set_xy(x + 63, y)
 
 #-----------Right--------------
-with pdf.table(width=87, col_widths=(35.5, 8, 35.5, 8), text_align='LEFT', align="LEFT", line_height=(2.9), first_row_as_headings=False, outer_border_width=0.3) as table:
-    style_defined = FontFace(fill_color=(204,255,255), size_pt=5, family='DejaVu', emphasis=None)
+with pdf.table(width=87, col_widths=(37, 6.5, 37, 6.5), text_align='LEFT', align="LEFT", line_height=(3.09), first_row_as_headings=False, outer_border_width=0.3) as table:
+    style_defined = FontFace(fill_color=(204,255,255), size_pt=4.9, family='DejaVu', emphasis=None)
     style_undefined = FontFace(fill_color=(255,255,255), size_pt=5, family='DejaVu', emphasis=None)
     style_header = FontFace(fill_color=(204,204,255), size_pt=7, family='DejaVu', emphasis='B')
 
@@ -693,11 +693,11 @@ with pdf.table(width=60, col_widths=(17, 3), text_align='LEFT', align="LEFT", li
     row.cell("", style=style_defined)
     row.cell("", style=style_undefined)
 
-pdf.set_xy(x + 63, y + 15)
+pdf.set_xy(x + 63, y + 16.2)
 x = pdf.get_x()
 
-#-----------Left--------------
-with pdf.table(width=84, col_widths=(27, 10, 27, 10), text_align='LEFT', align="LEFT", line_height=(3.1), first_row_as_headings=False, outer_border_width=0.3) as table:
+#-----------Right--------------
+with pdf.table(width=87, col_widths=(31, 6, 31, 6), text_align='LEFT', align="LEFT", line_height=(3.25), first_row_as_headings=False, outer_border_width=0.3) as table:
     
     style_defined = FontFace(fill_color=(204,255,255), size_pt=5, family='DejaVu', emphasis=None)
     style_undefined = FontFace(fill_color=(255,255,255), size_pt=5, family='DejaVu', emphasis=None)
@@ -758,8 +758,8 @@ y = pdf.get_y()
 
 pdf.set_xy(x, y + 4)
 
-#-----------Left--------------
-with pdf.table(width=84, col_widths=(21, 7, 21, 7, 21, 7), text_align='LEFT', align="LEFT", line_height=(3.1), first_row_as_headings=False, outer_border_width=0.3) as table:
+#-----------Right--------------
+with pdf.table(width=87, col_widths=(21, 7, 21, 7, 21, 7), text_align='CENTER', align="LEFT", line_height=(3.45), first_row_as_headings=False, outer_border_width=0.3) as table:
     
     style_defined = FontFace(fill_color=(204,255,255), size_pt=5, family='DejaVu', emphasis=None)
     style_undefined = FontFace(fill_color=(255,255,255), size_pt=5, family='DejaVu', emphasis=None)
@@ -787,7 +787,7 @@ with pdf.table(width=84, col_widths=(21, 7, 21, 7, 21, 7), text_align='LEFT', al
     row = table.row()
     row.cell("CA 125", style=style_defined)
     row.cell("", style=style_undefined)
-    row.cell("β2 -MICROGLOBULINA", style=style_defined)
+    row.cell("β2-MICROGLOBULINA", style=style_defined)
     row.cell("", style=style_undefined)
     row.cell("B-HCG CUANTITATIVA", style=style_defined)
     row.cell("", style=style_undefined)
@@ -816,13 +816,218 @@ with pdf.table(width=84, col_widths=(21, 7, 21, 7, 21, 7), text_align='LEFT', al
     row.cell("", style=style_defined)
     row.cell("", style=style_undefined)
 
+
+y = pdf.get_y()
+
+pdf.set_xy(x, y + 4)
+
+#-----------Right--------------
+with pdf.table(width=87, col_widths=(23, 5, 23, 5, 23, 5), text_align='CENTER', align="LEFT", line_height=(3.92), first_row_as_headings=False, outer_border_width=0.3) as table:
+    
+    style_defined = FontFace(fill_color=(204,255,255), size_pt=4.9, family='DejaVu', emphasis=None)
+    style_undefined = FontFace(fill_color=(255,255,255), size_pt=5, family='DejaVu', emphasis=None)
+    style_header = FontFace(fill_color=(204,204,255), size_pt=7, family='DejaVu', emphasis='B')
+
     row = table.row()
-    row.cell("COPROLÓGICO", style=style_defined)
+    row.cell("CITOQUÍMICO Y BACTERIOLÓGICO DE LÍQUIDOS", style=style_header, colspan=6, align="C")
+
+    row = table.row()
+    row.cell("CEFALORRAQUIDEO", style=style_defined)
     row.cell("", style=style_undefined)
-    row.cell("CRIPTOSPORIDIUM", style=style_defined)
+    row.cell("PLEURAL", style=style_defined)
     row.cell("", style=style_undefined)
-    row.cell("CRIPTOSPORIDIUM", style=style_defined)
+    row.cell("", style=style_defined)
     row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("ARTICULAR / SINOVIAL", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("PERICÁRDICO", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("ASCÍTICO / PERITONEAL", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("LÍQUIDO AMNIÓTICO", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("", style=style_defined)
+    row.cell("", style=style_undefined)
+
+y = pdf.get_y()
+
+pdf.set_xy(x, y + 4)
+
+#-----------Right--------------
+with pdf.table(width=87, col_widths=(29, 8, 29, 8), text_align='LEFT', align="LEFT", line_height=(3.1), first_row_as_headings=False, outer_border_width=0.3) as table:
+    
+    style_defined = FontFace(fill_color=(204,255,255), size_pt=5, family='DejaVu', emphasis=None)
+    style_undefined = FontFace(fill_color=(255,255,255), size_pt=5, family='DejaVu', emphasis=None)
+    style_header = FontFace(fill_color=(204,204,255), size_pt=7, family='DejaVu', emphasis='B')
+
+    row = table.row()
+    row.cell("NIVELES DE FÁRMACOS TERAPÉUTICAS", style=style_header, colspan=4, align="C")
+
+    row = table.row()
+    row.cell("ÁCIDO VALPROICO", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("CARBAMAZEPINA", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("VANCOMICINA", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("FENOBARBITAL", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("AMIKACINA", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("DIGOXINA", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("LITIO", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("FENITOÍNA SÓDICA", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("", style=style_defined)
+    row.cell("", style=style_undefined)
+
+pdf.set_xy(x - 150, y + 8)
+
+x = pdf.get_x()
+
+#-----------Left--------------
+with pdf.table(width=84, col_widths=(27, 10, 27, 10), text_align='LEFT', align="LEFT", line_height=(3.25), first_row_as_headings=False, outer_border_width=0.3) as table:
+    style_defined = FontFace(fill_color=(204,255,255), size_pt=5, family='DejaVu', emphasis=None)
+    style_undefined = FontFace(fill_color=(255,255,255), size_pt=5, family='DejaVu', emphasis=None)
+    style_header = FontFace(fill_color=(204,204,255), size_pt=7, family='DejaVu', emphasis='B')
+
+    row = table.row()
+    row.cell("MARCADORES CARDIACOS/VASCULARES", style=style_header, colspan=4, align="C")
+
+    row = table.row()
+    row.cell("CPK TOTAL", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("TROPONINA T", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("CK-MB", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("NT-proBNP", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("CPK-NAC", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("MIOGLOBINA", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("TROPONINA I", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("", style=style_defined)
+    row.cell("", style=style_undefined)
+
+y = pdf.get_y()
+
+pdf.set_xy(x, y + 4)
+
+
+#-----------Left--------------
+with pdf.table(width=84, col_widths=(27, 10, 27, 10), text_align='LEFT', align="LEFT", line_height=(3.25), first_row_as_headings=False, outer_border_width=0.3) as table:
+    style_defined = FontFace(fill_color=(204,255,255), size_pt=5, family='DejaVu', emphasis=None)
+    style_undefined = FontFace(fill_color=(255,255,255), size_pt=5, family='DejaVu', emphasis=None)
+    style_header = FontFace(fill_color=(204,204,255), size_pt=7, family='DejaVu', emphasis='B')
+
+    row = table.row()
+    row.cell("HORMONAS", style=style_header, colspan=4, align="C")
+
+    row = table.row()
+    row.cell("T3", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("PROGESTERONA", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("FT3", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("INSULINA", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("T4", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("ACTH", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("FT4", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("PROLACTINA", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("TSH", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("VITAMINA D", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("PTH", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("ESTRADIOL (E2)", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("FSH", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("LH", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("ANDROSTENEDIONA", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("CORTISOL", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("FACTOR DE CRECIMIENTO INSULINOIDE TIPO 1 (IGF-1)", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("TESTOSTERONA TOTAL", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("FACTOR DE UNION DEL FACTOR DE CRECIMIENTO T1 (IGFBP3)", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("TESTOSTERONA LIBRE", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("B-HCG CUALITATIVA", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("DHEA-S", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("B-HCG CUANTITATIVA", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("", style=style_defined)
+    row.cell("", style=style_undefined)
+
+    row = table.row()
+    row.cell("HORMONA DE CRECIMIENTO", style=style_defined)
+    row.cell("", style=style_undefined)
+    row.cell("", style=style_defined)
+    row.cell("", style=style_undefined)
+
 
 pdf.add_page(orientation='P')
 pdf.output('Doc.pdf')
